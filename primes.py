@@ -16,16 +16,28 @@ def primetest(potentialprime):
 
 
 def primes(number_of_primes):
-    count = 0
-    primesList = []
-    potentialprime = 2
 
-    # generate prime numbers until count reaches the user input number
-    while count < number_of_primes:
-        if primetest(potentialprime) == True:
-            # add the prime number to the list
-            primesList.append(potentialprime)
-            count += 1
-        potentialprime += 1
+
+    if number_of_primes <= 0:
+        raise ValueError("Value must be greater than 0")
+
+
+    else:
+        count = 0
+        primesList = []
+        potentialprime = 2
+
+        # generate prime numbers until count reaches the user input number
+        while count < number_of_primes:
+            if primetest(potentialprime) == True:
+                # add the prime number to the list
+                primesList.append(potentialprime)
+                count += 1
+            potentialprime += 1
+
+
+
     return primesList
+
+
 
