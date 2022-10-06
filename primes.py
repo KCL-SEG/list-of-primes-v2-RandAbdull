@@ -29,5 +29,3 @@ def primes(number_of_primes):
         potentialprime += 1
     return primesList
 
-
-print(primes(10))
